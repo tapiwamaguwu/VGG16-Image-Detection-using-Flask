@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>VGG16: Object Identification</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!--Getting flash messages-->
+    <p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <li>
+    {{ message }}
+    </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    </p> 
+    <h1>Object Identification Using VGG16</h1>
+    <form action="/submit" enctype="multipart/form-data" method="POST">
+    <input type="file" name="video" >
+    <input type="search" name="search", placeholder="Search object...">
+    <input type="submit"  >
+    </form>
+</body>
+</html>

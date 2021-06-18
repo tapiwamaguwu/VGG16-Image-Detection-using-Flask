@@ -1,0 +1,1 @@
+print('prediction'.__contains__('test'))
