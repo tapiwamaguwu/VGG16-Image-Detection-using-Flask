@@ -6,28 +6,27 @@
     <title>VGG16: Object Identification</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    
+    <script type="text/javascript">// <![CDATA[
+      function showAnalysisBar() {
+        $('#notice').show();
+      }
+    //]]></script>
 </head>
 <body>
-    <!--Getting flash messages-->
-    <p>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-    <li>
-    {{ message }}
-    </li>
-    {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-    </p> 
     <h1>Object Identification Using VGG16</h1>
     <form action="/submit" enctype="multipart/form-data" method="POST">
     <input type="file" name="video" >
+    <br>    
+    <br>                                                                                                                 
     <input type="search" name="search", placeholder="Search object...">
-    <input type="submit"  >
+    
+    <input type="submit" value="Search" onclick="showAnalysisBar();">
     </form>
+    <div id="notice" hidden=True>
+        <li>Analysing video...</li>
+    </div>
 </body>
+
+
 </html>

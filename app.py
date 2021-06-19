@@ -53,9 +53,11 @@ def submit():
             #loading video into model
             flash('Processing submitted video',"submission")
             objects_found=model.predict('uploads/'+filename)
+            print(objects_found)
             isfound,query_results=search_for_object(search_query,objects_found)
             #return redirect(url_for('download_file',name=filename))
-            return  render_template("submission.html",n={"search_query":search_query,"filename":filename,"isfound":isfound,"query_results":query_results})
+            print(query_results)
+            return  render_template("submission.html",n={"search_query":search_query,"filename":filename,"isfound":isfound,"query_results":query_results,"objects_found":objects_found})
         
         #else if file type not allowed
         flash("File Type Not Allowed. \".mp4\",\".avi\",\".mkv\" only")
@@ -67,6 +69,7 @@ def submit():
 def search_for_object(query,objects_found):
     isfound=False
     query_results=[]
+    print("Searching for ",query)
     for object in objects_found:
         if query in object['prediction']:
             isfound=True
