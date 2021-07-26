@@ -12,7 +12,8 @@ model and OpenCV to split the video into frames, analyses each frame and then re
 https://drive.google.com/file/d/1HgUOFvZ0f53oQHJJoCqhaXmoznI3xGu_/view?usp=sharing
 
 ## VGG16 Training and Example (Colab File)
-https://colab.research.google.com/drive/1YdMFlCCs3P2WJQ1C1dVVF-4i9Fc5TX8n#scrollTo=udhekJxOZxym
+
+https://colab.research.google.com/drive/1YdMFlCCs3P2WJQ1C1dVVF-4i9Fc5TX8n?usp=sharing
 
 ### How to Install
 To install and run the application follow these steps:
